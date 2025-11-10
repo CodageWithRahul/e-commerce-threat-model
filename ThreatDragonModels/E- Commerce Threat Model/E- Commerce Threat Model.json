@@ -20,11 +20,11 @@
           {
             "position": {
               "x": 150,
-              "y": -330
+              "y": -329.9999999999999
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 170,
+              "height": 80
             },
             "attrs": {
               "text": {
@@ -125,13 +125,140 @@
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
-              "description": "",
+              "description": "End user who browses products and places orders",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 409.99999999999955,
+              "y": -349.9999999999999
+            },
+            "size": {
+              "width": 140,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Web Application \nServer"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "54260c7b-849f-4b93-80c0-23afb50d0d38"
+                },
+                {
+                  "group": "right",
+                  "id": "709b1aca-a841-43a0-84f5-f0e37625b63b"
+                },
+                {
+                  "group": "bottom",
+                  "id": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
+                },
+                {
+                  "group": "left",
+                  "id": "a7c59c66-b9dd-427a-9263-fd748339479a"
+                }
+              ]
+            },
+            "id": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "Web Application \nServer",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ],
