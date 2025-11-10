@@ -1,0 +1,27 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "E- Commerce Threat Model",
+    "owner": "Rahul Gupta",
+    "description": "Threat model for a small e-commerce application using STRIDE",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "E-Commerce Threat Model",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Threat model for a small e-commerce application using STRIDE"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "TCS",
+    "threatTop": 0
+  }
+}
