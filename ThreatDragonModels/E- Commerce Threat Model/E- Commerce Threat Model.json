@@ -252,6 +252,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -380,8 +387,8 @@
           },
           {
             "position": {
-              "x": 434.99999999999955,
-              "y": -119.99999999999983
+              "x": 470,
+              "y": -120
             },
             "size": {
               "width": 170,
@@ -530,6 +537,51 @@
             "labels": [
               "Data Flow"
             ],
+            "id": "11e474c5-bab1-4fc4-845d-4927450a811e",
+            "source": {
+              "x": 605,
+              "y": -290
+            },
+            "target": {
+              "cell": "ea98db04-83bf-4619-a190-e8acf8b7b63c",
+              "port": "f794fbce-0698-4940-9a20-ec63fe182a77"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
             "id": "a9033e14-c8cf-4f11-a9d0-c6c109c534be",
             "source": {
               "cell": "b29ab300-4a03-4b5c-967f-1d683fc0554a",
@@ -576,14 +628,14 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "11e474c5-bab1-4fc4-845d-4927450a811e",
+            "id": "a5f613c9-57df-4798-b675-5d129fa92c3f",
             "source": {
-              "x": 605,
-              "y": -290
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
             },
             "target": {
-              "cell": "ea98db04-83bf-4619-a190-e8acf8b7b63c",
-              "port": "f794fbce-0698-4940-9a20-ec63fe182a77"
+              "cell": "f1cdd05b-a04e-46c9-bc38-24cd0adf5a79",
+              "port": "3dd7fed3-5732-4d97-aacd-142105008dd7"
             }
           }
         ],
