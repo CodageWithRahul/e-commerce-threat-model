@@ -19,6 +19,27 @@
         "cells": [
           {
             "position": {
+              "x": 466.99999999999955,
+              "y": -359.9999999999991
+            },
+            "size": {
+              "width": 430,
+              "height": 140
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "f62ad324-c2da-48e4-aab5-62abe0060bb6",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 150,
               "y": -329.9999999999999
             },
@@ -252,13 +273,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -387,8 +401,8 @@
           },
           {
             "position": {
-              "x": 470,
-              "y": -120
+              "x": 449.99999999999955,
+              "y": -110
             },
             "size": {
               "width": 170,
