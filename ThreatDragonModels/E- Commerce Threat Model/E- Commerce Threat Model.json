@@ -31,8 +31,8 @@
                 "text": "Website Users"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -129,15 +129,46 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "bca48f85-7396-4405-a107-b574b09cc203",
+                  "title": "User Identity Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "An attacker pretends to be a valid user by stealing or guessing login credentials, gaining unauthorized access to accounts",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "d4cfb4a9-f27c-4f24-8f19-8eb2ad8bf9d2",
+                  "title": "Action Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A user denies performing actions such as placing orders or making payments due to missing logs or insufficient tracking.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
             }
           },
           {
             "position": {
               "x": 570,
-              "y": -290
+              "y": -300
             },
             "size": {
               "width": 120,
@@ -148,8 +179,8 @@
                 "text": "Web Application \nServer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -246,12 +277,73 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c8515d28-e924-46b7-99de-5db3c2932abb",
+                  "title": "API Request Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attackers modify parameters in HTTP or API requests to manipulate prices, bypass checks, or execute unauthorized actions.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "0b06760b-9afe-48ac-b987-0a286ebc3b67",
+                  "title": "Sensitive Data Disclosure",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Application leaks sensitive data through unmasked error messages, insecure storage, or exposed configuration files.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "d656c9ce-0260-4b20-8cbe-9ce38905429d",
+                  "title": "Service Denial (DoS Attack)",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "High-volume traffic or automated bots overload the web server, causing unavailability for genuine users.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "3d932416-5c63-4c76-96d7-ccc0f19e94c8",
+                  "title": "Privilege Escalation Exploit",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Vulnerable application code or poor access control allows attackers to gain admin privileges on the server.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -268,11 +360,13 @@
                 "text": "Users Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -369,19 +463,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "f25d8fae-d408-48da-a75f-abfa3086bf2f",
+                  "title": "User Data  Altering ",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attacker can alter the user data in the data base",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
             "position": {
-              "x": 610,
-              "y": 0
+              "x": 690,
+              "y": -20
             },
             "size": {
               "width": 170,
@@ -392,8 +513,8 @@
                 "text": "Payment Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -490,16 +611,53 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
+              "threats": [
+                {
+                  "id": "a836668b-b3f7-42cc-957c-aa33d40be6a7",
+                  "title": "Fake Payment Gateway Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Users are redirected to a fake payment page designed to steal card or banking information.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "637a8d84-7653-4545-83bc-6c1de5ba47af",
+                  "title": "Payment Data Tampering",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Attackers intercept and modify payment amounts or transaction IDs during transfer between app and gateway.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "1b9b2178-b733-4b71-8918-427c929d7351",
+                  "title": "Payment Information Disclosure",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Credit card or transaction data exposed if HTTPS/TLS is not enforced or tokenization is missing.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
               ],
-              "name": null
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -662,33 +820,6 @@
                 "y": -200
               }
             ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Internet",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "Internet"
-            ],
-            "id": "b789f833-8720-43e7-8114-af8d3af3d0fc",
-            "source": {
-              "x": 330,
-              "y": -400
-            },
-            "target": {
-              "x": 330,
-              "y": 20
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -977,57 +1108,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Config DB Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Config DB Request"
-            ],
-            "id": "3e371e3b-18c7-4bd4-b8b4-be966c5c7d1a",
-            "source": {
-              "x": 630,
-              "y": -290
-            },
-            "target": {
-              "cell": "0999a17a-25c1-4695-af28-537e83a4b29a",
-              "port": "a470bd85-a8c8-4023-bb62-c8fdb492a7cb"
-            },
-            "vertices": [
-              {
-                "x": 760,
-                "y": -340
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Config DB Response",
               "description": "",
               "outOfScope": false,
@@ -1055,6 +1135,84 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Config DB Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Config DB Request"
+            ],
+            "id": "3e371e3b-18c7-4bd4-b8b4-be966c5c7d1a",
+            "source": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
+            },
+            "target": {
+              "cell": "0999a17a-25c1-4695-af28-537e83a4b29a",
+              "port": "a470bd85-a8c8-4023-bb62-c8fdb492a7cb"
+            },
+            "vertices": [
+              {
+                "x": 760,
+                "y": -340
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet Trust Boundry",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Internet Trust Boundry"
+            ],
+            "id": "b789f833-8720-43e7-8114-af8d3af3d0fc",
+            "source": {
+              "x": 330,
+              "y": -400
+            },
+            "target": {
+              "x": 330,
+              "y": 20
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": 110,
               "y": -160
@@ -1068,8 +1226,8 @@
                 "text": "Administrator"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1166,9 +1324,40 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "providesAuthentication": true,
+              "threats": [
+                {
+                  "id": "fa53a42f-51f6-4508-a029-e7c9d10bd238",
+                  "title": "Admin User Identity Spoofing",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "An attacker pretends to be a valid Admin user by stealing or guessing login credentials, gaining unauthorized access to accounts.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "ba6f0317-ac7b-4aae-a447-ca4872e985f3",
+                  "title": "Action Repudiation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Repudiation",
+                  "description": "A admin denies performing actions such as Making changes in config file  or any update on website",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -1185,11 +1374,13 @@
                 "text": "Website Configration\nFiles"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1286,13 +1477,72 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "0f86b335-5ca9-49f4-9b16-36644cd8cb9d",
+                  "title": "Data Tampering in Storage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attackers alter stored data such as order details or user balances, compromising integrity.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                },
+                {
+                  "id": "2d2e101a-65c1-4083-a897-1abd06192b8e",
+                  "title": "Information Disclosure via Injection",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Poorly sanitized input allows SQL injection, exposing sensitive customer and transaction data.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "6b62bae2-bcbe-4f35-9227-b49cddbbd90e",
+                  "title": "Database Service Disruption",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Malicious queries or resource exhaustion cause the database to crash or become unresponsive.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "7e3f8d38-6ce2-4a31-9c10-beedbc7b12de",
+                  "title": "Unauthorized Privilege Access",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Weak authentication or misconfigured database roles allow attackers to access restricted tables or functions.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             }
           }
         ],
@@ -1301,6 +1551,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "TCS",
-    "threatTop": 0
+    "threatTop": 17
   }
 }
