@@ -380,7 +380,7 @@
           },
           {
             "position": {
-              "x": 529,
+              "x": 789,
               "y": -80
             },
             "size": {
@@ -693,14 +693,24 @@
             },
             "vertices": [
               {
-                "x": 450,
-                "y": -80
+                "x": 670,
+                "y": -40
               },
               {
-                "x": 500,
-                "y": -130
+                "x": 625,
+                "y": -100
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
