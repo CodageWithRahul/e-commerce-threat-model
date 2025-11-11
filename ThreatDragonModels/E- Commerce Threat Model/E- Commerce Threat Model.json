@@ -750,42 +750,6 @@
             ]
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "Trust Boundary"
-            ],
-            "id": "b789f833-8720-43e7-8114-af8d3af3d0fc",
-            "source": {
-              "x": 330,
-              "y": -400
-            },
-            "target": {
-              "x": 330,
-              "y": 20
-            },
-            "vertices": [
-              {
-                "x": 360,
-                "y": -370
-              },
-              {
-                "x": 330,
-                "y": -250
-              }
-            ]
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -838,17 +802,7 @@
                 "x": 530,
                 "y": -200
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
@@ -955,6 +909,52 @@
                 "y": -350
               }
             ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Internet"
+            ],
+            "id": "b789f833-8720-43e7-8114-af8d3af3d0fc",
+            "source": {
+              "x": 330,
+              "y": -400
+            },
+            "target": {
+              "x": 330,
+              "y": 20
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": -370
+              },
+              {
+                "x": 330,
+                "y": -250
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
