@@ -136,7 +136,7 @@
                   "id": "bca48f85-7396-4405-a107-b574b09cc203",
                   "title": "User Identity Spoofing",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "An attacker pretends to be a valid user by stealing or guessing login credentials, gaining unauthorized access to accounts",
                   "mitigation": "Implement multi-factor authentication (MFA), enforce strong passwords, and add account lockout after repeated failures.",
@@ -160,8 +160,8 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
-                "repudiation": 2
+                "spoofing": 3,
+                "repudiation": 3
               }
             }
           },
@@ -287,7 +287,7 @@
                   "id": "c8515d28-e924-46b7-99de-5db3c2932abb",
                   "title": "API Request Tampering",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Tampering",
                   "description": "Attackers modify parameters in HTTP or API requests to manipulate prices, bypass checks, or execute unauthorized actions.",
                   "mitigation": "Use input validation, parameterized APIs, and digital signatures for API payloads.",
@@ -326,7 +326,7 @@
                   "id": "3d932416-5c63-4c76-96d7-ccc0f19e94c8",
                   "title": "Privilege Escalation Exploit",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Elevation of privilege",
                   "description": "Vulnerable application code or poor access control allows attackers to gain admin privileges on the server.",
                   "mitigation": "Use role-based access control (RBAC), perform regular patching, and input validation to block code injection.",
@@ -338,11 +338,11 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 3,
                 "denialOfService": 2,
-                "elevationOfPrivilege": 2
+                "elevationOfPrivilege": 3
               }
             }
           },
@@ -472,7 +472,7 @@
                   "id": "f25d8fae-d408-48da-a75f-abfa3086bf2f",
                   "title": "Data Tampering in Storage",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Tampering",
                   "description": "Attackers alter stored data such as prices or balances.",
                   "mitigation": "Implement database access control, checksums, and integrity verification after transactions.",
@@ -485,7 +485,7 @@
                   "id": "9231922d-6c44-403e-84c9-d2d068393c4f",
                   "title": "Information Disclosure via Injection",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Information disclosure",
                   "description": "SQL injection exposes sensitive data like user details or payment info.",
                   "mitigation": "Use prepared statements, parameterized queries, and input sanitization.",
@@ -498,7 +498,7 @@
                   "id": "e03ca96a-7892-4ce3-80d1-9f6dd717db26",
                   "title": "Database Service Disruption",
                   "status": "Mitigated",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Malicious queries or high load crash the database or lock tables.",
                   "mitigation": "Set query timeouts, backup schedules, and monitor for abnormal query patterns.",
@@ -509,266 +509,12 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 3,
+                "tampering": 4,
                 "repudiation": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 2
+                "informationDisclosure": 2,
+                "denialOfService": 3
               }
             }
-          },
-          {
-            "position": {
-              "x": 690,
-              "y": -20
-            },
-            "size": {
-              "width": 170,
-              "height": 80
-            },
-            "attrs": {
-              "text": {
-                "text": "Payment Gateway"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "zIndex": 4,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "3dd7fed3-5732-4d97-aacd-142105008dd7"
-                },
-                {
-                  "group": "right",
-                  "id": "3d21eb4b-164d-42b5-8f61-499e10572a99"
-                },
-                {
-                  "group": "bottom",
-                  "id": "309e6664-5ee2-4897-a87e-55d3fe8ef703"
-                },
-                {
-                  "group": "left",
-                  "id": "978b9b9a-e506-4530-8081-09b29cb2ff75"
-                }
-              ]
-            },
-            "id": "f1cdd05b-a04e-46c9-bc38-24cd0adf5a79",
-            "data": {
-              "type": "tm.Actor",
-              "name": "Payment Gateway",
-              "description": "External payment service (e.g., PayPal, Razorpay, Stripe)",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "a836668b-b3f7-42cc-957c-aa33d40be6a7",
-                  "title": "Fake Payment Gateway Spoofing",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Spoofing",
-                  "description": "Users are redirected to a fake payment page designed to steal card or banking information.",
-                  "mitigation": "Use trusted payment providers, verify SSL certificates, and display clear URLs before redirection.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 11,
-                  "score": ""
-                },
-                {
-                  "id": "637a8d84-7653-4545-83bc-6c1de5ba47af",
-                  "title": "Payment Data Tampering",
-                  "status": "Mitigated",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Attackers intercept and modify payment amounts or transaction IDs during transfer between app and gateway.",
-                  "mitigation": "Implement HMAC signatures, TLS encryption, and transaction integrity checks.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "spoofing": 4,
-                "repudiation": 0
-              }
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment API Call",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment API Call"
-            ],
-            "id": "a5f613c9-57df-4798-b675-5d129fa92c3f",
-            "source": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
-            },
-            "target": {
-              "cell": "f1cdd05b-a04e-46c9-bc38-24cd0adf5a79",
-              "port": "3dd7fed3-5732-4d97-aacd-142105008dd7"
-            },
-            "vertices": [
-              {
-                "x": 680,
-                "y": -140
-              },
-              {
-                "x": 680,
-                "y": -110
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "HTTP Request"
-            ],
-            "id": "a9033e14-c8cf-4f11-a9d0-c6c109c534be",
-            "source": {
-              "cell": "b29ab300-4a03-4b5c-967f-1d683fc0554a",
-              "port": "3dd7fed3-5732-4d97-aacd-142105008dd7"
-            },
-            "target": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
-            },
-            "vertices": [
-              {
-                "x": 300,
-                "y": -350
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -928,61 +674,6 @@
               {
                 "x": 490,
                 "y": -230
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment Status Reponse",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment Status Reponse"
-            ],
-            "id": "6f9de99d-cfcb-4cce-b771-4a26958943ca",
-            "source": {
-              "cell": "f1cdd05b-a04e-46c9-bc38-24cd0adf5a79",
-              "port": "978b9b9a-e506-4530-8081-09b29cb2ff75"
-            },
-            "target": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
-            },
-            "vertices": [
-              {
-                "x": 590,
-                "y": -60
-              },
-              {
-                "x": 590,
-                "y": -110
               }
             ]
           },
@@ -1217,6 +908,232 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Status Reponse",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Payment Status Reponse"
+            ],
+            "id": "6f9de99d-cfcb-4cce-b771-4a26958943ca",
+            "source": {
+              "cell": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
+              "port": "cc2af675-3e4c-4022-9f4e-45d0be36ca37"
+            },
+            "target": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": -100
+              },
+              {
+                "x": 600,
+                "y": -150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "00e86502-1098-44f2-8df6-279425c795f4",
+                  "title": "HTTP Request to Server",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attacker intercepts or modifies request data.",
+                  "mitigation": "Use HTTPS/TLS and validate all parameters on server side.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                },
+                {
+                  "id": "d8641140-9541-430b-9e12-e0bc432f4bfb",
+                  "title": "HTTP Response to User",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data (e.g., tokens) leaked in responses.",
+                  "mitigation": "Avoid exposing internal details, use secure cookies (HttpOnly).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTP Request"
+            ],
+            "id": "a9033e14-c8cf-4f11-a9d0-c6c109c534be",
+            "source": {
+              "cell": "b29ab300-4a03-4b5c-967f-1d683fc0554a",
+              "port": "3dd7fed3-5732-4d97-aacd-142105008dd7"
+            },
+            "target": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": -350
+              },
+              {
+                "x": 420,
+                "y": -330
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment API Call",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "636d658d-cba6-42da-a497-d9e9619bdc58",
+                  "title": "Payment API Call to gateway",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Payment data altered during API communication.",
+                  "mitigation": "TLS encryption, payload signing, nonce validation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment API Call"
+            ],
+            "id": "a5f613c9-57df-4798-b675-5d129fa92c3f",
+            "source": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
+            },
+            "target": {
+              "cell": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
+              "port": "1a93b3f1-6596-4843-ae7d-03e968f0a848"
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": -180
+              },
+              {
+                "x": 690,
+                "y": -110
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
               "x": 110,
               "y": -160
@@ -1360,7 +1277,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 2,
-                "repudiation": 2
+                "repudiation": 3
               }
             }
           },
@@ -1530,15 +1447,189 @@
                 "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 2,
-                "denialOfService": 2
+                "denialOfService": 3
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 570,
+              "y": -20
+            },
+            "size": {
+              "width": 120,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Payment \nGateway"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
             },
-            "tools": {
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
               "items": [
-                "boundary",
-                "button-remove"
+                {
+                  "group": "top",
+                  "id": "78076e71-ed58-4b0b-8b92-85d3613d3092"
+                },
+                {
+                  "group": "right",
+                  "id": "1a93b3f1-6596-4843-ae7d-03e968f0a848"
+                },
+                {
+                  "group": "bottom",
+                  "id": "5fdb99f3-d79c-4363-880f-33e9b6c2f61f"
+                },
+                {
+                  "group": "left",
+                  "id": "cc2af675-3e4c-4022-9f4e-45d0be36ca37"
+                }
+              ]
+            },
+            "id": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Process",
+              "name": "Payment \nGateway",
+              "description": "External payment service",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "f405bfc6-8f02-4752-9094-bf3a2d4f8a82",
+                  "title": "Fake Payment Gateway Spoofing",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Users redirected to fake gateway to steal data.",
+                  "mitigation": "Use HTTPS, domain validation, and whitelist trusted payment URLs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "c9e0c199-8441-46ee-9936-7d74ef99194a",
+                  "title": "Payment Data Tampering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Payment details modified during transmission",
+                  "mitigation": "Use TLS, HMAC signatures, and server-side validation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                },
+                {
+                  "id": "abc21cdd-6c41-45f4-b6da-9e757b793f6a",
+                  "title": "Payment Info Disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Card data exposed if no encryption or tokenization.",
+                  "mitigation": "Enforce PCI DSS, HTTPS, and avoid storing card data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "472ce77f-2715-4296-8494-979d4e37e036",
+                  "title": "Payment Service Unavailable",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Gateway downtime disrupts transactions.",
+                  "mitigation": "Add fallback payment options, retries, and logging.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
               ],
-              "name": null
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 0
+              }
             }
           }
         ],
@@ -1547,6 +1638,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "TCS",
-    "threatTop": 19
+    "threatTop": 26
   }
 }
