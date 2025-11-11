@@ -252,13 +252,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -891,16 +884,17 @@
               "x": 330,
               "y": 20
             },
-            "vertices": [
-              {
-                "x": 360,
-                "y": -370
-              },
-              {
-                "x": 330,
-                "y": -250
-              }
-            ]
+            "vertices": [],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
