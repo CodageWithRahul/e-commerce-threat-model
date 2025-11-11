@@ -256,8 +256,8 @@
           },
           {
             "position": {
-              "x": 869,
-              "y": -150
+              "x": 959,
+              "y": -140
             },
             "size": {
               "width": 120,
@@ -381,7 +381,7 @@
           {
             "position": {
               "x": 610,
-              "y": 40
+              "y": 0
             },
             "size": {
               "width": 170,
@@ -493,6 +493,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -545,8 +552,8 @@
                 "y": -140
               },
               {
-                "x": 740,
-                "y": -80
+                "x": 680,
+                "y": -110
               }
             ]
           },
@@ -1166,7 +1173,7 @@
           },
           {
             "position": {
-              "x": 869,
+              "x": 959,
               "y": -290
             },
             "size": {
@@ -1175,7 +1182,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Website Configration"
+                "text": "Website Configration\nFiles"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -1274,7 +1281,7 @@
             "zIndex": 12,
             "data": {
               "type": "tm.Store",
-              "name": "Website Configration",
+              "name": "Website Configration\nFiles",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1286,13 +1293,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ],
