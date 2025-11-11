@@ -826,13 +826,19 @@
             "vertices": [
               {
                 "x": 300,
-                "y": -390
-              },
-              {
-                "x": 500,
-                "y": -390
+                "y": -350
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ],
         "description": "Threat model for a small e-commerce application using STRIDE"
