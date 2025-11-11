@@ -380,8 +380,8 @@
           },
           {
             "position": {
-              "x": 889,
-              "y": -80
+              "x": 779,
+              "y": -100
             },
             "size": {
               "width": 170,
@@ -493,6 +493,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -884,17 +891,7 @@
               "x": 330,
               "y": 20
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
