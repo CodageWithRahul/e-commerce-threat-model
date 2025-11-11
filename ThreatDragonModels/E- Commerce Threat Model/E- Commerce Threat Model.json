@@ -506,6 +506,19 @@
                   "new": false,
                   "number": 19,
                   "score": ""
+                },
+                {
+                  "id": "133cc37a-baf7-41ca-bf1f-8e5ca2591a30",
+                  "title": "Unauthorized Database Access",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Attacker exploits weak DB credentials or misconfigured roles.",
+                  "mitigation": "Use least privilege principle and rotate DB passwords regularly.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -514,6 +527,13 @@
                 "informationDisclosure": 2,
                 "denialOfService": 3
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -627,260 +647,6 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "HTTP Response"
-            ],
-            "id": "d6d2de31-4321-4a31-ab1b-432b95910f40",
-            "source": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
-            },
-            "target": {
-              "cell": "b29ab300-4a03-4b5c-967f-1d683fc0554a",
-              "port": "3d21eb4b-164d-42b5-8f61-499e10572a99"
-            },
-            "vertices": [
-              {
-                "x": 490,
-                "y": -230
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "DB Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "DB Request"
-            ],
-            "id": "11e474c5-bab1-4fc4-845d-4927450a811e",
-            "source": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "709b1aca-a841-43a0-84f5-f0e37625b63b"
-            },
-            "target": {
-              "cell": "ea98db04-83bf-4619-a190-e8acf8b7b63c",
-              "port": "cefdd8c0-7c1c-4aec-87cc-993242a27c62"
-            },
-            "vertices": [
-              {
-                "x": 750,
-                "y": -230
-              },
-              {
-                "x": 820,
-                "y": -200
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "DB Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "DB Response"
-            ],
-            "id": "4bd69204-0026-4e0c-a7d8-10a02cb036d1",
-            "source": {
-              "cell": "ea98db04-83bf-4619-a190-e8acf8b7b63c",
-              "port": "f794fbce-0698-4940-9a20-ec63fe182a77"
-            },
-            "target": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "709b1aca-a841-43a0-84f5-f0e37625b63b"
-            },
-            "vertices": [
-              {
-                "x": 770,
-                "y": -160
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Config DB Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Config DB Response"
-            ],
-            "id": "686c9df7-4726-4743-9c4a-821b2df13b2e",
-            "source": {
-              "cell": "0999a17a-25c1-4695-af28-537e83a4b29a",
-              "port": "501a267c-818d-4f4d-af89-3d1b60b44d11"
-            },
-            "target": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Config DB Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Config DB Request"
-            ],
-            "id": "3e371e3b-18c7-4bd4-b8b4-be966c5c7d1a",
-            "source": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
-            },
-            "target": {
-              "cell": "0999a17a-25c1-4695-af28-537e83a4b29a",
-              "port": "a470bd85-a8c8-4023-bb62-c8fdb492a7cb"
-            },
-            "vertices": [
-              {
-                "x": 760,
-                "y": -340
-              }
-            ]
-          },
-          {
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
@@ -927,7 +693,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Payment Status Reponse",
+              "name": "Payment API Call",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -937,28 +703,47 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "636d658d-cba6-42da-a497-d9e9619bdc58",
+                  "title": "Payment API Call to gateway",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Payment data altered during API communication.",
+                  "mitigation": "TLS encryption, payload signing, nonce validation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Payment Status Reponse"
+              "Payment API Call"
             ],
-            "id": "6f9de99d-cfcb-4cce-b771-4a26958943ca",
+            "id": "a5f613c9-57df-4798-b675-5d129fa92c3f",
             "source": {
-              "cell": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
-              "port": "cc2af675-3e4c-4022-9f4e-45d0be36ca37"
-            },
-            "target": {
               "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
               "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
             },
+            "target": {
+              "cell": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
+              "port": "1a93b3f1-6596-4843-ae7d-03e968f0a848"
+            },
             "vertices": [
               {
-                "x": 600,
-                "y": -100
+                "x": 690,
+                "y": -180
               },
               {
-                "x": 600,
-                "y": -150
+                "x": 690,
+                "y": -110
               }
             ]
           },
@@ -1069,7 +854,77 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Payment API Call",
+              "name": "HTTP Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b04e4d18-76c7-4964-ba83-dd67e8a7f6a8",
+                  "title": "HTTP Response to user",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Sensitive headers or error info leaked in responses.",
+                  "mitigation": "Use HTTPS, hide server banners, and sanitize server messages.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTP Response"
+            ],
+            "id": "d6d2de31-4321-4a31-ab1b-432b95910f40",
+            "source": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
+            },
+            "target": {
+              "cell": "b29ab300-4a03-4b5c-967f-1d683fc0554a",
+              "port": "3d21eb4b-164d-42b5-8f61-499e10572a99"
+            },
+            "vertices": [
+              {
+                "x": 490,
+                "y": -230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "DB Request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1081,57 +936,326 @@
               "protocol": "",
               "threats": [
                 {
-                  "id": "636d658d-cba6-42da-a497-d9e9619bdc58",
-                  "title": "Payment API Call to gateway",
+                  "id": "8146ed11-3967-4937-9f35-8542fc86cafe",
+                  "title": "DB Request ",
                   "status": "Mitigated",
                   "severity": "High",
                   "type": "Tampering",
-                  "description": "Payment data altered during API communication.",
-                  "mitigation": "TLS encryption, payload signing, nonce validation.",
+                  "description": "Malicious or injected queries alter database content.",
+                  "mitigation": "Use parameterized queries and sanitize user inputs.",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 26,
+                  "number": 31,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
+                "tampering": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
             },
             "labels": [
-              "Payment API Call"
+              "DB Request"
             ],
-            "id": "a5f613c9-57df-4798-b675-5d129fa92c3f",
+            "id": "11e474c5-bab1-4fc4-845d-4927450a811e",
             "source": {
               "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
+              "port": "709b1aca-a841-43a0-84f5-f0e37625b63b"
             },
             "target": {
-              "cell": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
-              "port": "1a93b3f1-6596-4843-ae7d-03e968f0a848"
+              "cell": "ea98db04-83bf-4619-a190-e8acf8b7b63c",
+              "port": "cefdd8c0-7c1c-4aec-87cc-993242a27c62"
             },
             "vertices": [
               {
-                "x": 690,
-                "y": -180
+                "x": 750,
+                "y": -230
               },
               {
-                "x": 690,
-                "y": -110
+                "x": 820,
+                "y": -200
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "DB Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "1d0c0bd3-826e-4206-b847-b03bfacfddf2",
+                  "title": "DB Response",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Database returns excessive data (e.g., all user details).",
+                  "mitigation": "Limit query outputs and mask sensitive columns.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": ""
+                }
               ],
-              "name": null
-            }
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "DB Response"
+            ],
+            "id": "4bd69204-0026-4e0c-a7d8-10a02cb036d1",
+            "source": {
+              "cell": "ea98db04-83bf-4619-a190-e8acf8b7b63c",
+              "port": "f794fbce-0698-4940-9a20-ec63fe182a77"
+            },
+            "target": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "709b1aca-a841-43a0-84f5-f0e37625b63b"
+            },
+            "vertices": [
+              {
+                "x": 770,
+                "y": -160
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Config DB Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "5671be03-0cb1-4558-a7f3-0f3e3ddcc5cd",
+                  "title": "Config DB Request Admin to Config Store",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Unprotected admin request can be hijacked or replayed.",
+                  "mitigation": "Use encrypted admin channels and API authentication tokens.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Config DB Request"
+            ],
+            "id": "3e371e3b-18c7-4bd4-b8b4-be966c5c7d1a",
+            "source": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
+            },
+            "target": {
+              "cell": "0999a17a-25c1-4695-af28-537e83a4b29a",
+              "port": "a470bd85-a8c8-4023-bb62-c8fdb492a7cb"
+            },
+            "vertices": [
+              {
+                "x": 760,
+                "y": -340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Config DB Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e40d02d2-37bf-4797-a8f9-d6c491045076",
+                  "title": "Config DB Response Config db to Admin",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Config data with secrets exposed in plain text.",
+                  "mitigation": "Mask or encrypt secrets before display, limit access to trusted roles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Config DB Response"
+            ],
+            "id": "686c9df7-4726-4743-9c4a-821b2df13b2e",
+            "source": {
+              "cell": "0999a17a-25c1-4695-af28-537e83a4b29a",
+              "port": "501a267c-818d-4f4d-af89-3d1b60b44d11"
+            },
+            "target": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "54260c7b-849f-4b93-80c0-23afb50d0d38"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Status Reponse",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "126aede6-9fe5-4351-b679-6afdd3e939c3",
+                  "title": "Payment Status Response Gateway to App ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Fake response from attacker makes app mark payments as successful.",
+                  "mitigation": "Verify signed responses and validate transaction IDs against gateway records.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment Status Reponse"
+            ],
+            "id": "6f9de99d-cfcb-4cce-b771-4a26958943ca",
+            "source": {
+              "cell": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
+              "port": "cc2af675-3e4c-4022-9f4e-45d0be36ca37"
+            },
+            "target": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "ccfa68e4-3d72-45cc-a33a-2fd43f901cf4"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": -100
+              },
+              {
+                "x": 600,
+                "y": -150
+              }
+            ]
           },
           {
             "position": {
@@ -1472,6 +1596,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1555,7 +1680,6 @@
               ]
             },
             "id": "6dca05b4-53b1-4b5b-a9c6-fe48d655546d",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Payment \nGateway",
@@ -1638,6 +1762,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "TCS",
-    "threatTop": 35
+    "threatTop": 37
   }
 }
