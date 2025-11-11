@@ -136,8 +136,8 @@
           },
           {
             "position": {
-              "x": 534.9999999999995,
-              "y": -339.9999999999999
+              "x": 624.9999999999995,
+              "y": -369.9999999999991
             },
             "size": {
               "width": 120,
@@ -252,19 +252,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
             "position": {
-              "x": 839,
-              "y": -309.9999999999999
+              "x": 949,
+              "y": -309.9999999999991
             },
             "size": {
               "width": 120,
@@ -387,7 +380,7 @@
           },
           {
             "position": {
-              "x": 789,
+              "x": 889,
               "y": -80
             },
             "size": {
@@ -781,7 +774,16 @@
               "x": 330,
               "y": 20
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 360,
+                "y": -370
+              },
+              {
+                "x": 330,
+                "y": -250
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -849,7 +851,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "HTTP Response",
+              "name": "HTTP Respon",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -862,7 +864,7 @@
               "threats": []
             },
             "labels": [
-              "HTTP Response"
+              "HTTP Respon"
             ],
             "id": "edd32658-0303-4425-b28c-198cc0e6995e",
             "source": {
@@ -930,14 +932,24 @@
             },
             "vertices": [
               {
-                "x": 730,
-                "y": -350
+                "x": 720,
+                "y": -370
               },
               {
                 "x": 840,
                 "y": -350
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
