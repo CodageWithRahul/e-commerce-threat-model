@@ -136,8 +136,8 @@
           },
           {
             "position": {
-              "x": 640,
-              "y": -300
+              "x": 570,
+              "y": -290
             },
             "size": {
               "width": 120,
@@ -252,6 +252,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -932,8 +939,8 @@
             ],
             "id": "edd32658-0303-4425-b28c-198cc0e6995e",
             "source": {
-              "x": 630,
-              "y": -230
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
             },
             "target": {
               "cell": "546317d7-9d92-41ec-8025-83b236eac145",
@@ -948,17 +955,7 @@
                 "x": 450,
                 "y": -100
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "position": {
