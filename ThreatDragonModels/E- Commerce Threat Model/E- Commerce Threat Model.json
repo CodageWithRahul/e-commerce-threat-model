@@ -163,13 +163,6 @@
                 "spoofing": 2,
                 "repudiation": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -186,8 +179,8 @@
                 "text": "Web Application \nServer"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -284,7 +277,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -293,11 +286,11 @@
                 {
                   "id": "c8515d28-e924-46b7-99de-5db3c2932abb",
                   "title": "API Request Tampering",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Attackers modify parameters in HTTP or API requests to manipulate prices, bypass checks, or execute unauthorized actions.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Use input validation, parameterized APIs, and digital signatures for API payloads.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
@@ -306,11 +299,11 @@
                 {
                   "id": "0b06760b-9afe-48ac-b987-0a286ebc3b67",
                   "title": "Sensitive Data Disclosure",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Application leaks sensitive data through unmasked error messages, insecure storage, or exposed configuration files.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Use HTTPS/TLS, avoid verbose errors, encrypt sensitive data in transit and at rest.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
@@ -319,11 +312,11 @@
                 {
                   "id": "d656c9ce-0260-4b20-8cbe-9ce38905429d",
                   "title": "Service Denial (DoS Attack)",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "type": "Denial of service",
                   "description": "High-volume traffic or automated bots overload the web server, causing unavailability for genuine users.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Implement rate limiting, WAF (Web Application Firewall), and cloud-based DDoS protection.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -332,11 +325,11 @@
                 {
                   "id": "3d932416-5c63-4c76-96d7-ccc0f19e94c8",
                   "title": "Privilege Escalation Exploit",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Vulnerable application code or poor access control allows attackers to gain admin privileges on the server.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Use role-based access control (RBAC), perform regular patching, and input validation to block code injection.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
@@ -345,11 +338,11 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 1,
-                "elevationOfPrivilege": 1
+                "informationDisclosure": 3,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -367,13 +360,11 @@
                 "text": "Users Database"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -470,7 +461,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -479,31 +470,50 @@
               "threats": [
                 {
                   "id": "f25d8fae-d408-48da-a75f-abfa3086bf2f",
-                  "title": "User Data  Altering ",
-                  "status": "Open",
+                  "title": "Data Tampering in Storage",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Attacker can alter the user data in the data base",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Attackers alter stored data such as prices or balances.",
+                  "mitigation": "Implement database access control, checksums, and integrity verification after transactions.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 16,
                   "score": ""
+                },
+                {
+                  "id": "9231922d-6c44-403e-84c9-d2d068393c4f",
+                  "title": "Information Disclosure via Injection",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "SQL injection exposes sensitive data like user details or payment info.",
+                  "mitigation": "Use prepared statements, parameterized queries, and input sanitization.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "e03ca96a-7892-4ce3-80d1-9f6dd717db26",
+                  "title": "Database Service Disruption",
+                  "status": "Mitigated",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Malicious queries or high load crash the database or lock tables.",
+                  "mitigation": "Set query timeouts, backup schedules, and monitor for abnormal query patterns.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 3,
                 "repudiation": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0
+                "informationDisclosure": 1,
+                "denialOfService": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -520,8 +530,8 @@
                 "text": "Payment Gateway"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -618,17 +628,17 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "a836668b-b3f7-42cc-957c-aa33d40be6a7",
                   "title": "Fake Payment Gateway Spoofing",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Users are redirected to a fake payment page designed to steal card or banking information.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Use trusted payment providers, verify SSL certificates, and display clear URLs before redirection.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 11,
@@ -637,33 +647,20 @@
                 {
                   "id": "637a8d84-7653-4545-83bc-6c1de5ba47af",
                   "title": "Payment Data Tampering",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Spoofing",
                   "description": "Attackers intercept and modify payment amounts or transaction IDs during transfer between app and gateway.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Implement HMAC signatures, TLS encryption, and transaction integrity checks.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 12,
                   "score": ""
-                },
-                {
-                  "id": "1b9b2178-b733-4b71-8918-427c929d7351",
-                  "title": "Payment Information Disclosure",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Repudiation",
-                  "description": "Credit card or transaction data exposed if HTTPS/TLS is not enforced or tokenization is missing.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 13,
-                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
-                "repudiation": 1
+                "spoofing": 4,
+                "repudiation": 0
               }
             }
           },
@@ -1233,8 +1230,8 @@
                 "text": "Administrator"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1331,17 +1328,17 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": true,
               "threats": [
                 {
                   "id": "fa53a42f-51f6-4508-a029-e7c9d10bd238",
-                  "title": "Admin User Identity Spoofing",
-                  "status": "Open",
+                  "title": "Admin User Spoofing",
+                  "status": "Mitigated",
                   "severity": "Critical",
                   "type": "Spoofing",
-                  "description": "An attacker pretends to be a valid Admin user by stealing or guessing login credentials, gaining unauthorized access to accounts.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Attacker gains access by stealing or brute-forcing admin credentials.",
+                  "mitigation": "Use 2FA for admin logins, restrict access by IP, and strong password rotation.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 14,
@@ -1349,12 +1346,12 @@
                 },
                 {
                   "id": "ba6f0317-ac7b-4aae-a447-ca4872e985f3",
-                  "title": "Action Repudiation",
-                  "status": "Open",
-                  "severity": "Critical",
+                  "title": "Admin Action Repudiation",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "type": "Repudiation",
-                  "description": "A admin denies performing actions such as Making changes in config file  or any update on website",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Admin denies making website or config changes without traceability.",
+                  "mitigation": "Maintain admin activity logs, digital signatures, and change management records.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 15,
@@ -1362,8 +1359,8 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
-                "repudiation": 1
+                "spoofing": 2,
+                "repudiation": 2
               }
             }
           },
@@ -1381,13 +1378,11 @@
                 "text": "Website Configration\nFiles"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1484,7 +1479,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1493,12 +1488,12 @@
               "threats": [
                 {
                   "id": "0f86b335-5ca9-49f4-9b16-36644cd8cb9d",
-                  "title": "Data Tampering in Storage",
-                  "status": "Open",
+                  "title": "Config File Tampering",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Tampering",
-                  "description": "Attackers alter stored data such as order details or user balances, compromising integrity.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Attackers alter website config files to redirect users or disable security.",
+                  "mitigation": "Apply file integrity monitoring, read-only permissions, and version control (Git).",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
@@ -1506,12 +1501,12 @@
                 },
                 {
                   "id": "2d2e101a-65c1-4083-a897-1abd06192b8e",
-                  "title": "Information Disclosure via Injection",
-                  "status": "Open",
-                  "severity": "Low",
+                  "title": "Information Disclosure via Config Files",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Poorly sanitized input allows SQL injection, exposing sensitive customer and transaction data.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Sensitive keys or DB credentials leaked in exposed config files.",
+                  "mitigation": "Store credentials in environment variables or secret vaults not plain text files.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
@@ -1519,37 +1514,31 @@
                 },
                 {
                   "id": "6b62bae2-bcbe-4f35-9227-b49cddbbd90e",
-                  "title": "Database Service Disruption",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "title": "Configuration Service Disruption",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "type": "Denial of service",
-                  "description": "Malicious queries or resource exhaustion cause the database to crash or become unresponsive.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Deletion or corruption of config files causes system downtime.",
+                  "mitigation": "Keep regular backups, and limit write permissions to trusted admins only.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
                   "score": ""
-                },
-                {
-                  "id": "7e3f8d38-6ce2-4a31-9c10-beedbc7b12de",
-                  "title": "Unauthorized Privilege Access",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Repudiation",
-                  "description": "Weak authentication or misconfigured database roles allow attackers to access restricted tables or functions.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "repudiation": 1,
-                "informationDisclosure": 1,
-                "denialOfService": 1
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 2
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ],
@@ -1558,6 +1547,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "TCS",
-    "threatTop": 17
+    "threatTop": 19
   }
 }
