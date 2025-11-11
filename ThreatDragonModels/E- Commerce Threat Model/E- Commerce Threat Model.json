@@ -19,12 +19,17 @@
         "cells": [
           {
             "position": {
-              "x": 519,
+              "x": 480,
               "y": -389.9999999999991
             },
             "size": {
               "width": 520,
               "height": 200
+            },
+            "attrs": {
+              "label": {
+                "text": "Internet"
+              }
             },
             "visible": true,
             "shape": "trust-boundary-box",
@@ -32,10 +37,17 @@
             "id": "f62ad324-c2da-48e4-aab5-62abe0060bb6",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "Internet",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -49,7 +61,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Customer"
+                "text": "Website Users"
               },
               "body": {
                 "stroke": "#333333",
@@ -145,7 +157,7 @@
             "id": "b29ab300-4a03-4b5c-967f-1d683fc0554a",
             "data": {
               "type": "tm.Actor",
-              "name": "Customer",
+              "name": "Website Users",
               "description": "End user who browses products and places orders",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -828,16 +840,123 @@
                 "x": 300,
                 "y": -350
               }
-            ],
-            "tools": {
+            ]
+          },
+          {
+            "position": {
+              "x": 110,
+              "y": -229.99999999999898
+            },
+            "size": {
+              "width": 170,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Administrator"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
               "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
+                {
+                  "group": "top",
+                  "id": "2a9d13ed-2546-4078-8057-6d3392296162"
+                },
+                {
+                  "group": "right",
+                  "id": "da67396b-d4dc-48ba-85f4-8f024c5fa3f5"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ef79c3e-bd0f-41fc-b809-f64789fe4dc8"
+                },
+                {
+                  "group": "left",
+                  "id": "7900f323-5b2b-42f3-b9bb-61cce440a3c5"
+                }
+              ]
+            },
+            "id": "546317d7-9d92-41ec-8025-83b236eac145",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Administrator",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
             }
           }
         ],
