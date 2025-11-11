@@ -527,13 +527,6 @@
                 "informationDisclosure": 2,
                 "denialOfService": 3
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -588,61 +581,6 @@
               {
                 "x": 530,
                 "y": -200
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP Respon",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "HTTP Respon"
-            ],
-            "id": "edd32658-0303-4425-b28c-198cc0e6995e",
-            "source": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
-            },
-            "target": {
-              "cell": "546317d7-9d92-41ec-8025-83b236eac145",
-              "port": "da67396b-d4dc-48ba-85f4-8f024c5fa3f5"
-            },
-            "vertices": [
-              {
-                "x": 520,
-                "y": -120
-              },
-              {
-                "x": 450,
-                "y": -100
               }
             ]
           },
@@ -1203,7 +1141,66 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Payment Status Reponse",
+              "name": "HTTP Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTP Response"
+            ],
+            "id": "edd32658-0303-4425-b28c-198cc0e6995e",
+            "source": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
+            },
+            "target": {
+              "cell": "546317d7-9d92-41ec-8025-83b236eac145",
+              "port": "da67396b-d4dc-48ba-85f4-8f024c5fa3f5"
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": -120
+              },
+              {
+                "x": 500,
+                "y": -100
+              },
+              {
+                "x": 450,
+                "y": -100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Status Response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1235,7 +1232,7 @@
               }
             },
             "labels": [
-              "Payment Status Reponse"
+              "Payment Status Response"
             ],
             "id": "6f9de99d-cfcb-4cce-b771-4a26958943ca",
             "source": {
@@ -1416,7 +1413,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Website Configration\nFiles"
+                "text": "Website Configuration\nFiles"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -1515,7 +1512,7 @@
             "id": "0999a17a-25c1-4695-af28-537e83a4b29a",
             "data": {
               "type": "tm.Store",
-              "name": "Website Configration\nFiles",
+              "name": "Website Configuration\nFiles",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
