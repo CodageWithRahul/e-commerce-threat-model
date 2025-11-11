@@ -530,61 +530,6 @@
             }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "HTTP Request"
-            ],
-            "id": "24ea9d62-e942-4397-b836-535c01d4f971",
-            "source": {
-              "cell": "546317d7-9d92-41ec-8025-83b236eac145",
-              "port": "2a9d13ed-2546-4078-8057-6d3392296162"
-            },
-            "target": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
-            },
-            "vertices": [
-              {
-                "x": 460,
-                "y": -160
-              },
-              {
-                "x": 530,
-                "y": -200
-              }
-            ]
-          },
-          {
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
@@ -1141,65 +1086,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "HTTP Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "HTTP Response"
-            ],
-            "id": "edd32658-0303-4425-b28c-198cc0e6995e",
-            "source": {
-              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
-              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
-            },
-            "target": {
-              "cell": "546317d7-9d92-41ec-8025-83b236eac145",
-              "port": "da67396b-d4dc-48ba-85f4-8f024c5fa3f5"
-            },
-            "vertices": [
-              {
-                "x": 520,
-                "y": -120
-              },
-              {
-                "x": 500,
-                "y": -100
-              },
-              {
-                "x": 450,
-                "y": -100
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Payment Status Response",
               "description": "",
               "outOfScope": false,
@@ -1251,6 +1137,158 @@
               {
                 "x": 600,
                 "y": -150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "21c6509e-b592-44f1-9d9f-7e58d135ac84",
+                  "title": "Admin HTTP Response Server to Admin",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "The server response to admin requests might reveal sensitive system info, config file paths, or debugging data.",
+                  "mitigation": "Sanitize all output, disable verbose error messages, and ensure admin pages are accessible only over secure sessions (HTTPS + authentication).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 41,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTP Response"
+            ],
+            "id": "edd32658-0303-4425-b28c-198cc0e6995e",
+            "source": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
+            },
+            "target": {
+              "cell": "546317d7-9d92-41ec-8025-83b236eac145",
+              "port": "da67396b-d4dc-48ba-85f4-8f024c5fa3f5"
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": -120
+              },
+              {
+                "x": 500,
+                "y": -100
+              },
+              {
+                "x": 450,
+                "y": -100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4daaea39-c307-4719-8944-a5cefce175d1",
+                  "title": "Admin HTTP Request Admin to Server",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts or modifies admin requests (e.g., uploading a malicious config file or performing unauthorized admin actions).",
+                  "mitigation": "Use HTTPS/TLS, implement IP-based admin access control, and verify admin session tokens on every request.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTP Request"
+            ],
+            "id": "24ea9d62-e942-4397-b836-535c01d4f971",
+            "source": {
+              "cell": "546317d7-9d92-41ec-8025-83b236eac145",
+              "port": "2a9d13ed-2546-4078-8057-6d3392296162"
+            },
+            "target": {
+              "cell": "e2742f77-6dbd-4efc-ae0f-0763b8906a5a",
+              "port": "a7c59c66-b9dd-427a-9263-fd748339479a"
+            },
+            "vertices": [
+              {
+                "x": 460,
+                "y": -160
+              },
+              {
+                "x": 530,
+                "y": -200
               }
             ]
           },
